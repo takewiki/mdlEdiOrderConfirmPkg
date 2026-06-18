@@ -4,10 +4,10 @@
 \alias{EdiOrderConfirm_view}
 \title{EDI销售订单查询}
 \usage{
-EdiOrderConfirm_view(dms_token, FMessageNumber, FLineItemNumber)
+EdiOrderConfirm_view(erp_token, FMessageNumber, FLineItemNumber)
 }
 \arguments{
-\item{dms_token}{}
+\item{erp_token}{}
 }
 \value{
 两个数的和

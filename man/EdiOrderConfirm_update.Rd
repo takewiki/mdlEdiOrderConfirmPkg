@@ -5,16 +5,17 @@
 \title{EDI销售订单更新}
 \usage{
 EdiOrderConfirm_update(
-  dms_token,
+  erp_token,
   FMessageNumber,
   FLineItemNumber,
   FCommittedQuantity,
   FCommittedQuantityUOM,
-  FCommittedQuantityConfirmedDate
+  FCommittedQuantityConfirmedDate,
+  FErpDeliveryDate
 )
 }
 \arguments{
-\item{dms_token}{}
+\item{erp_token}{}
 }
 \value{
 两个数的和
@@ -23,5 +24,5 @@ EdiOrderConfirm_update(
 EDI销售订单更新
 }
 \examples{
-EdiOrderConfirm_view()
+EdiOrderConfirm_update()
 }
