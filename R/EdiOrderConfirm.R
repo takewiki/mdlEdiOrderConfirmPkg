@@ -220,3 +220,59 @@ EdiOrderFIsDo_update <- function(erp_token, FMessageNumber) {
   return(res)
 
 }
+
+
+#' EDI销售订单确认删除
+#'
+#' @param FMessageNumber
+#' @param erp_token
+#'
+#' @return 两个数的和
+#' @export
+#'
+#' @examples
+#' EdiOrderConfirm_delete()
+EdiOrderConfirm_delete <- function(erp_token, FMessageNumber) {
+
+
+  sql=paste0("
+  exec rds_proc_Edi_OrderConfirm_delete  '",FMessageNumber,"'
+
+             ")
+
+  res = tsda::sql_delete2(token =erp_token ,sql_str = sql)
+
+
+
+  return(res)
+
+}
+
+
+
+
+#' EDI数据中台销售订单确认删除
+#'
+#' @param FMessageNumber
+#' @param erp_token
+#'
+#' @return 两个数的和
+#' @export
+#'
+#' @examples
+#' dms_EdiOrderConfirm_delete()
+dms_EdiOrderConfirm_delete <- function(dms_token, FBillNo) {
+
+
+  sql=paste0("
+  exec rds_proc_Edi_salesOrder_delete  '",FBillNo,"'
+
+             ")
+
+  res = tsda::sql_delete2(token =dms_token ,sql_str = sql)
+
+
+
+  return(res)
+
+}
