@@ -4,7 +4,7 @@
 \alias{EdiOrderConfirm_delete}
 \title{EDI销售订单确认删除}
 \usage{
-EdiOrderConfirm_delete(erp_token, FMessageNumber)
+EdiOrderConfirm_delete(erp_token, FMessageNumber, FDate)
 }
 \arguments{
 \item{erp_token}{}

@@ -225,6 +225,7 @@ EdiOrderFIsDo_update <- function(erp_token, FMessageNumber) {
 #' EDI销售订单确认删除
 #'
 #' @param FMessageNumber
+#' @param FDate
 #' @param erp_token
 #'
 #' @return 两个数的和
@@ -232,11 +233,11 @@ EdiOrderFIsDo_update <- function(erp_token, FMessageNumber) {
 #'
 #' @examples
 #' EdiOrderConfirm_delete()
-EdiOrderConfirm_delete <- function(erp_token, FMessageNumber) {
+EdiOrderConfirm_delete <- function(erp_token, FMessageNumber,FDate) {
 
 
   sql=paste0("
-  exec rds_proc_Edi_OrderConfirm_delete  '",FMessageNumber,"'
+  exec rds_proc_Edi_OrderConfirm_delete  '",FMessageNumber,"','",FDate,"'
 
              ")
 
@@ -253,19 +254,20 @@ EdiOrderConfirm_delete <- function(erp_token, FMessageNumber) {
 
 #' EDI数据中台销售订单确认删除
 #'
-#' @param FMessageNumber
-#' @param erp_token
+#' @param dms_token
+#' @param FBillNo
+#' @param FDate
 #'
 #' @return 两个数的和
 #' @export
 #'
 #' @examples
 #' dms_EdiOrderConfirm_delete()
-dms_EdiOrderConfirm_delete <- function(dms_token, FBillNo) {
+dms_EdiOrderConfirm_delete <- function(dms_token, FBillNo,FDate) {
 
 
   sql=paste0("
-  exec rds_proc_Edi_salesOrder_delete  '",FBillNo,"'
+  exec rds_proc_Edi_salesOrder_delete  '",FBillNo,"','",FDate,"'
 
              ")
 

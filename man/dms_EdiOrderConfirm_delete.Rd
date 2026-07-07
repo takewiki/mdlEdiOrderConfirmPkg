@@ -4,10 +4,10 @@
 \alias{dms_EdiOrderConfirm_delete}
 \title{EDI数据中台销售订单确认删除}
 \usage{
-dms_EdiOrderConfirm_delete(dms_token, FBillNo)
+dms_EdiOrderConfirm_delete(dms_token, FBillNo, FDate)
 }
 \arguments{
-\item{erp_token}{}
+\item{FDate}{}
 }
 \value{
 两个数的和
