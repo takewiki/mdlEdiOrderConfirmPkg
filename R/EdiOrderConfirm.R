@@ -165,8 +165,8 @@ select
 	   CAST(F.PriceDetailCalculationNetPrice as decimal(28,10))/ CAST(F.PriceDetailUnitPriceBasis as decimal(28,10))*CAST(F.OrderedQuantity as decimal(28,10)) as F_rds_productAmountGL,
 	    CONVERT(varchar(10), CONVERT(date, FErpDeliveryDate, 112), 120) AS FDeliveryDate,
 		'' as FBomId,
-		'002' as F_QH_Industry,
-		'0000' as F_kd_APPLICATION,
+		'001' as F_QH_Industry,
+		'0101' as F_kd_APPLICATION,
        0 as  [FIsDo]
            ,'待处理' as [FLogMessage]
            ,getdate() as [FUpdateTime]
